@@ -1,0 +1,68 @@
+{
+    "name": "@bobbyfidz/next-relay",
+    "version": "0.0.0",
+    "exports": {
+        ".": {
+            "types": "./lib/index.d.ts",
+            "default": "./lib/index.js"
+        },
+        "./config": {
+            "types": "./lib/config/index.d.ts",
+            "default": "./lib/config/index.js"
+        },
+        "./environment": {
+            "types": "./lib/environment/index.d.ts",
+            "default": "./lib/environment/index.js"
+        },
+        "./server": {
+            "types": "./lib/server/index.d.ts",
+            "default": "./lib/server/index.js"
+        }
+    },
+    "bin": {
+        "next-relay": "./bin/run.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint"
+    },
+    "oclif": {
+        "bin": "next-relay",
+        "commands": "./lib/cli",
+        "dirname": "next-relay",
+        "topicSeparator": " "
+    },
+    "dependencies": {
+        "graphql": "^16.9.0",
+        "ts-deepmerge": "^7.0.1"
+    },
+    "devDependencies": {
+        "@next/env": "^14.0.0",
+        "@oclif/core": "^4.0.22",
+        "jiti": "^1.21.6",
+        "@rushstack/node-core-library": "^5.9.0",
+        "@rushstack/terminal": "^0.14.2",
+        "chokidar": "^4.0.1",
+        "cosmiconfig": "^9.0.0",
+        "@types/node": "^20",
+        "@types/react": "^18.3.12",
+        "@types/react-relay": "^16.0.6",
+        "@types/relay-runtime": "^18.1.1",
+        "@clack/prompts": "^0.8.1",
+        "eslint": "^8.57.0",
+        "next": "^14.0.0",
+        "react": "^18.3.1",
+        "react-relay": "^18.1.0",
+        "relay-compiler": "^18.1.0",
+        "relay-runtime": "^18.1.0",
+        "ts-node": "^10.9.2",
+        "typescript": "~5.4.5"
+    },
+    "peerDependencies": {
+        "next": "^14.0.0 || ^15.0.0",
+        "react": "^18.0.0 || ^19.0.0",
+        "react-relay": "^18.1.0",
+        "relay-compiler": "^18.1.0",
+        "relay-runtime": "^18.1.0"
+    }
+}

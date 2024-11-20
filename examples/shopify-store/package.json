@@ -1,0 +1,35 @@
+{
+  "name": "@bobbyfidz/shopify-store",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "next dev",
+    "dist": "next build",
+    "generate-relay": "relay-compiler",
+    "lint": "eslint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "relay-runtime": "^18.1.0",
+    "react-relay": "^18.1.0",
+    "next": "15.0.3",
+    "@bobbyfidz/next-relay": "workspace:*",
+    "cookies-next": "^5.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/relay-runtime": "^18.1.1",
+    "@types/react-relay": "^16.0.6",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "relay-compiler": "^18.1.0"
+  }
+}

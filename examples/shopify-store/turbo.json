@@ -1,0 +1,10 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "extends": ["//"],
+    "tasks": {
+        "generate-relay": {
+            "inputs": ["src/**", "!src/__generated__/relay/**", "relay.config.js", "schema.graphql"],
+            "outputs": ["src/__generated__/relay/**"]
+        }
+    }
+}

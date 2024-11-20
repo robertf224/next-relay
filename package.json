@@ -1,0 +1,16 @@
+{
+    "name": "@bobbyfidz/next-relay-monorepo",
+    "private": true,
+    "devDependencies": {
+        "husky": "^9.1.4",
+        "prettier": "^3.3.3",
+        "prettier-plugin-packagejson": "^2.5.1",
+        "prettier-plugin-tailwindcss": "^0.6.6",
+        "pretty-quick": "^4.0.0",
+        "turbo": "2.3.0"
+    },
+    "packageManager": "pnpm@9.6.0",
+    "engines": {
+        "node": "18.18.2"
+    }
+}

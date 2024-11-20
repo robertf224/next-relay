@@ -1,0 +1,23 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "ui": "tui",
+    "tasks": {
+        "generate-relay": {
+            "dependsOn": ["^build"]
+        },
+        "build": {
+            "dependsOn": ["^build", "generate-relay"],
+            "inputs": ["src/**", "tsconfig.json"],
+            "outputs": ["lib/**"]
+        },
+        "lint": {
+            "dependsOn": ["build"],
+            "inputs": ["src/**", ".eslintrc.json"]
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true,
+            "dependsOn": ["^build", "generate-relay"]
+        }
+    }
+}

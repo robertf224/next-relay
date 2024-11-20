@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+
+# Local env files
+.env
+.env*.local
+
+# Testing
+coverage
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Next.js
+.next
+
+# Build outputs
+out
+build
+dist
+temp
+lib
+*.tsbuildInfo
+
+# Generated code
+__generated__
+
+# Debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.DS_Store
+*.pem

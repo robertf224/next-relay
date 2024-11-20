@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "outDir": "lib",
+        "rootDir": "src",
+
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "target": "ES2022",
+        "strict": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "module": "CommonJS",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "incremental": true,
+        "paths": {
+            "@bobbyfidz/next-relay/environment": ["./src/environment"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"]
+}
