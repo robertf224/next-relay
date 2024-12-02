@@ -32,6 +32,10 @@ export const AddToCartButton: React.FC<AddToCartButtonProps> = ({ productId }) =
                 cartId,
                 productId,
             },
+            optimisticUpdater: (store) => {
+                const cart = store.get(cartId)!;
+                cart.setValue((cart.getValue("totalQuantity") as number) + 1, "totalQuantity");
+            },
         });
     };
 
