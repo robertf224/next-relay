@@ -1,11 +1,12 @@
-name: CI
+name: Publish
 on:
-    pull_request:
+    push:
         branches:
             - main
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
-    ci:
-        name: CI
+    publish:
+        name: Publish
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -23,3 +24,11 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Build and test
               run: pnpm turbo --color build lint
+            - name: Create publish PR
+              id: changesets
+              uses: changesets/action@v1
+              with:
+                  publish: pnpm exec changeset publish
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

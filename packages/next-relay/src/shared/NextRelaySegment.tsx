@@ -4,18 +4,18 @@ import { readQuery } from "../server";
 import { NextRelaySegmentClient } from "./NextRelaySegmentClient";
 import { getRelayEnvironment } from "../server/getRelayEnvironment";
 
-export function NextRelaySegment<Query extends OperationType>(
+export function NextRelaySegment<Query extends OperationType, Props = {}>(
     query: GraphQLTaggedNode,
-    Component: React.FC<{ data: Query["response"]; children?: React.ReactNode }>,
+    Component: React.FC<{ data: Query["response"] } & Props>,
     opts?: {
         variables?: (params: Record<string, string | undefined>) => Promise<Query["variables"]>;
     }
-): React.FC<{ params: Promise<Query["variables"]>; children?: React.ReactNode }> {
-    return async function NextRelaySegmentLoader({ params, children }) {
+): React.FC<{ params: Promise<Query["variables"]> } & Props> {
+    return async function NextRelaySegmentLoader({ params, ...rest }) {
         const variables = opts?.variables ? await opts.variables(await params) : await params;
         const data = await readQuery(query, variables);
 
-        const wrapped = <Component data={data} children={children} />;
+        const wrapped = <Component {...(rest as Props)} data={data} />;
 
         // TODO: derive this automatically via communicating with NextRelayEnvironmentProvider to save sending data over the wire when we don't need to
         const shouldUpdateClientStore = true;

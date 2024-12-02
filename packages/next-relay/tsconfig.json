@@ -13,6 +13,7 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "sourceMap": true,
+        "declarationMap": true,
         "incremental": true,
         "paths": {
             "@bobbyfidz/next-relay/environment": ["./src/environment"]
