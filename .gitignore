@@ -23,7 +23,7 @@ build
 dist
 temp
 lib
-*.tsbuildInfo
+*.tsbuildinfo
 
 # Generated code
 __generated__
