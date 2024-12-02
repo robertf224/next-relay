@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { graphql } from "relay-runtime";
 
-export default NextRelaySegment<layout_StoreLayoutQuery>(
+export default NextRelaySegment<layout_StoreLayoutQuery, { children: React.ReactNode }>(
     graphql`
         query layout_StoreLayoutQuery($cartId: ID!) {
             shop {

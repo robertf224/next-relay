@@ -6,7 +6,7 @@
     "build": "tsc",
     "dev": "next dev",
     "dist": "next build",
-    "generate-relay": "relay-compiler",
+    "generate-relay": "mkdir -p src/__generated__/relay && relay-compiler",
     "lint": "eslint",
     "start": "next start"
   },
