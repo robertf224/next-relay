@@ -11,7 +11,7 @@
         "module": "CommonJS",
         "resolveJsonModule": true,
         "isolatedModules": true,
-        "jsx": "preserve",
+        "jsx": "react",
         "sourceMap": true,
         "declarationMap": true,
         "incremental": true,
