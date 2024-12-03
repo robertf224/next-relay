@@ -1,5 +1,11 @@
 # @bobbyfidz/next-relay
 
+## 0.0.3
+
+### Patch Changes
+
+-   6b5d513: Stop emitting JSX
+
 ## 0.0.2
 
 ### Patch Changes
