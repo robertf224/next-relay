@@ -90,13 +90,6 @@ importers:
 
   packages/next-relay:
     dependencies:
-      graphql:
-        specifier: ^16.9.0
-        version: 16.9.0
-      ts-deepmerge:
-        specifier: ^7.0.1
-        version: 7.0.1
-    devDependencies:
       '@clack/prompts':
         specifier: ^0.8.1
         version: 0.8.1
@@ -112,6 +105,25 @@ importers:
       '@rushstack/terminal':
         specifier: ^0.14.2
         version: 0.14.2(@types/node@20.17.6)
+      chokidar:
+        specifier: ^4.0.1
+        version: 4.0.1
+      cosmiconfig:
+        specifier: ^9.0.0
+        version: 9.0.0(typescript@5.4.5)
+      graphql:
+        specifier: ^16.9.0
+        version: 16.9.0
+      jiti:
+        specifier: ^1.21.6
+        version: 1.21.6
+      ts-deepmerge:
+        specifier: ^7.0.1
+        version: 7.0.1
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.17.6)(typescript@5.4.5)
+    devDependencies:
       '@types/node':
         specifier: ^20
         version: 20.17.6
@@ -124,18 +136,9 @@ importers:
       '@types/relay-runtime':
         specifier: ^18.1.1
         version: 18.1.1
-      chokidar:
-        specifier: ^4.0.1
-        version: 4.0.1
-      cosmiconfig:
-        specifier: ^9.0.0
-        version: 9.0.0(typescript@5.4.5)
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
-      jiti:
-        specifier: ^1.21.6
-        version: 1.21.6
       next:
         specifier: ^14.0.0
         version: 14.2.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -151,9 +154,6 @@ importers:
       relay-runtime:
         specifier: ^18.1.0
         version: 18.1.0
-      ts-node:
-        specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.17.6)(typescript@5.4.5)
       typescript:
         specifier: ~5.4.5
         version: 5.4.5
